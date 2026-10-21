@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>એ વર્લ્ડ માર્કેટીંગ (વિંછીયા) - ઓનલાઇન બુકિંગ</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background: #fdf6ec; color: #2d3748; padding: 10px; }
+    .container { max-width: 480px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); overflow: hidden; border: 1px solid #fed7aa; }
+    .header { background: linear-gradient(135deg, #b91c1c, #991b1b); color: white; text-align: center; padding: 14px 10px; }
+    .header h1 { font-size: 20px; font-weight: bold; margin-bottom: 4px; }
+    .header p { font-size: 13px; opacity: 0.95; }
+    .badge { display: inline-block; background: #fef08a; color: #854d0e; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: bold; margin-top: 6px; }
+    .content { padding: 16px; }
+    .price-box { background: #fffbeb; border: 2px dashed #f59e0b; border-radius: 8px; text-align: center; padding: 10px; margin-bottom: 16px; }
+    .price-box .amount { font-size: 26px; color: #b91c1c; font-weight: bold; }
+    .form-group { margin-bottom: 14px; }
+    label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 14px; color: #374151; }
+    input { width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 15px; outline: none; }
+    input:focus { border-color: #b91c1c; }
+    .btn { display: block; width: 100%; padding: 13px; background: #b91c1c; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; text-align: center; text-decoration: none; margin-top: 10px; }
+    .btn:hover { background: #991b1b; }
+    .qr-section { text-align: center; margin: 18px 0; padding: 14px; background: #f9fafb; border-radius: 8px; border: 1px solid #e5e7eb; }
+    .qr-section img { width: 210px; height: 210px; border-radius: 8px; border: 1px solid #e2e8f0; }
+    .upi-id { margin-top: 10px; font-weight: bold; color: #1e3a8a; font-size: 14px; word-break: break-all; }
+    .receipt { display: none; background: #f0fdf4; border: 2px solid #86efac; border-radius: 8px; padding: 18px; text-align: center; margin-top: 15px; }
+    .receipt h3 { color: #166534; margin-bottom: 8px; font-size: 20px; }
+    .ticket-no { font-size: 26px; font-weight: 800; color: #b91c1c; letter-spacing: 2px; margin: 10px 0; background: #fff; padding: 8px; border-radius: 6px; border: 1px dashed #b91c1c; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h1>એ વર્લ્ડ માર્કેટીંગ (વિંછીયા)</h1>
+    <p>મેગા બમ્પર ઓફર-2 | ઓનલાઇન બુકિંગ ફોર્મ</p>
+    <div class="badge">લકી ડ્રો તારીખ: 27/11/2026</div>
+  </div>
+
+  <div class="content">
+    <div id="bookingFormSection">
+      <div class="price-box">
+        <div>શીતલ લવાજમ રકમ (પ્રતિ કૂપન)</div>
+        <div class="amount">₹ 499 /-</div>
+      </div>
+
+      <div class="form-group">
+        <label>પૂરું ના�� (Full Name):</label>
+        <input type="text" id="custName" placeholder="ગ્રાહકનું પૂરું નામ દાખલ કરો" required>
+      </div>
+
+      <div class="form-group">
+        <label>મોબાઇલ નંબર (Mobile No):</label>
+        <input type="tel" id="custPhone" placeholder="10 આંકડાનો મોબાઇલ નંબર" required>
+      </div>
+
+      <div class="form-group">
+        <label>ગામ / શહેર (City/Village):</label>
+        <input type="text" id="custCity" placeholder="ગામ અથવા શહેરનું નામ" required>
+      </div>
+
+      <div class="qr-section">
+        <p style="font-weight: 600; margin-bottom: 10px; color: #374151;">આ QR કોડ સ્કેન કરી ₹499 ચૂકવો:</p>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi%3A%2F%2Fpay%3Fpa%3Dsankaliyavikram555%40oksbi%26pn%3DVikram%2520Sankaliya%26am%3D499%26cu%3DINR" alt="UPI QR Code">
+        <div class="upi-id">UPI ID: sankaliyavikram555@oksbi</div>
+        <div style="font-size: 13px; color: #4b5563; margin-top: 4px;">નામ: Vikram Sankaliya</div>
+        
+        <a href="upi://pay?pa=sankaliyavikram555@oksbi&pn=Vikram%20Sankaliya&am=499&cu=INR" class="btn" style="background:#2563eb; margin-top: 12px;">
+          GPay / PhonePe / Paytm થી પેમેન્ટ કરો
+        </a>
+      </div>
+
+      <div class="form-group">
+        <label>પેમેન્ટ UTR / Ref No (પેમેન્ટ પછી દાખલ કરો):</label>
+        <input type="text" id="utrNo" placeholder="12 આંકડાનો UTR નંબર">
+      </div>
+
+      <button class="btn" onclick="submitBooking()">બુકિંગ કન્ફર્મ કરો અને કૂપન મેળવો</button>
+    </div>
+
+    <div id="receiptSection" class="receipt">
+      <h3>🎉 બુકિંગ સફળતાપૂર્વક કન્ફર્મ થયું!</h3>
+      <p style="font-weight: 600; color: #15803d;">તમારો કૂપન નંબર:</p>
+      <div class="ticket-no" id="dispTicket">AWM-000000</div>
+      
+      <div style="text-align: left; background: #fff; padding: 14px; border-radius: 8px; margin-top: 12px; font-size: 14px; border: 1px solid #bbf7d0; line-height: 1.6;">
+        <p><strong>યોજના:</strong> એ વર્લ્ડ માર્કેટીંગ (વિંછીયા)</p>
+        <p><strong>ગ્રાહક નામ:</strong> <span id="dispName"></span></p>
+        <p><strong>મોબાઇલ:</strong> <span id="dispPhone"></span></p>
+        <p><strong>ગામ:</strong> <span id="dispCity"></span></p>
+        <p><strong>બુકિંગ તારીખ:</strong> <span id="dispDate"></span></p>
+        <p><strong>ચૂકવેલ રકમ:</strong> ₹499 (Paid)</p>
+        <p><strong>ડ્રો તારીખ:</strong> 27/11/2026</p>
+      </div>
+
+      <button class="btn" onclick="window.print()" style="margin-top: 15px; background: #059669;">રસીદ ડાઉનલોડ / પ્રિન્ટ કરો</button>
+      <button class="btn" onclick="location.reload()" style="margin-top: 8px; background: #4b5563;">બીજું નવું બુકિંગ કરો</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function submitBooking() {
+    const name = document.getElementById('custName').value.trim();
+    const phone = document.getElementById('custPhone').value.trim();
+    const city = document.getElementById('custCity').value.trim();
+
+    if (!name || !phone || phone.length < 10) {
+      alert("કૃપા કરીને ગ્રાહકનું પૂરું નામ અને સાચો 10 આંકડાનો મોબાઇલ નંબર દાખલ કરો.");
+      return;
+    }
+
+    const randomNum = Math.floor(10000 + Math.random() * 90000);
+    const ticketNo = "AWM-" + randomNum;
+    const today = new Date().toLocaleDateString('gu-IN');
+
+    document.getElementById('dispName').innerText = name;
+    document.getElementById('dispPhone').innerText = phone;
+    document.getElementById('dispCity').innerText = city || "-";
+    document.getElementById('dispDate').innerText = today;
+    document.getElementById('dispTicket').innerText = ticketNo;
+
+    document.getElementById('bookingFormSection').style.display = 'none';
+    document.getElementById('receiptSection').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
